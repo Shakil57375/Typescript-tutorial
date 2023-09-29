@@ -1,4 +1,4 @@
-- TypeScript Overview.
+## TypeScript Overview.
 Basically, TypeScript is like an extension or "superset" of JavaScript.
 Since JavaScript is a loosely typed language,
 TypeScript enforces the strict use of types. 
