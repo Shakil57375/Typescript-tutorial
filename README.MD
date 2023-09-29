@@ -3,7 +3,7 @@ Basically, TypeScript is like an extension or "superset" of JavaScript.
 Since JavaScript is a loosely typed language,
 TypeScript enforces the strict use of types. 
 Thus, making it a strictly typed language.
-- What is TypeScript?
+- # What is TypeScript?
 
 TypeScript is a syntactic superset of JavaScript which adds static typing.
 This basically means that TypeScript adds syntax on top of JavaScript, allowing developers to add types.
