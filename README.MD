@@ -1,3 +1,4 @@
+
 # TypeScript Overview.
 
     -Basically, TypeScript is like an extension or "superset" of JavaScript.
@@ -5,6 +6,15 @@
     Since JavaScript is a loosely typed language,
     TypeScript enforces the strict use of types.
     Thus, making it a strictly typed language.
+
+```bash
+mkdir typescript-project
+cd typescript-project
+npm i typescript --save-dev
+npx tsc --init
+touch index.ts
+npx tsc index.ts && node index.js
+```
 
 # What is TypeScript?
 
@@ -45,7 +55,6 @@
 
 To learn more about TypeScript, take a look at the following resources:
 
-- [Typescript Org](https://www.typescriptlang.org/) -  Visit TypeScript Website.
+- [Typescript Org](https://www.typescriptlang.org/) - Visit TypeScript Website.
 
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/) - Visit Typescript documentation.
-
