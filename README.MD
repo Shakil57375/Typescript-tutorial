@@ -7,6 +7,8 @@
     TypeScript enforces the strict use of types.
     Thus, making it a strictly typed language.
 
+
+Mind this is a simple setup, consider reading official documentation for project setup
 ```bash
 mkdir typescript-project
 cd typescript-project
