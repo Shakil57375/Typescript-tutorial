@@ -45,6 +45,7 @@
 
 To learn more about TypeScript, take a look at the following resources:
 
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/) - learn about Next.js features and API.
+- [Typescript Org](https://www.typescriptlang.org/) -  Visit TypeScript Website.
 
-- [Typescript Org](https://www.typescriptlang.org/) - learn about Next.js features and API.
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/) - Visit Typescript documentation.
+
