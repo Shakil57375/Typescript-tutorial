@@ -13,6 +13,10 @@
         - Refactoring
         - Shorthand notations
 
+    - Drawbacks
+        - Compilation
+        - Discipline in coding
+
 
 Mind this is a simple setup, consider reading official documentation for project setup
 ```bash
