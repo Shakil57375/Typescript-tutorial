@@ -10,4 +10,5 @@ function test(document) {
 let numbers = [3, 3];
 let number = [3, 5, 3];
 number.forEach(n => console.log(n.toString()));
+let user = [2, "ff"];
 //# sourceMappingURL=index.js.map
