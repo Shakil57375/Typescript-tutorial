@@ -36,3 +36,27 @@ const mixedArray = ["me", 33, true];
 // mixedArray.push({
 //     name : "Shakil"
 // }) ❌ you can't push any number to a object because there is no object in the previously if you want to push an array you can just create an array when you create the function.
+// object
+let MyObj = {
+    name: "Shakil",
+    age: 21,
+    student: true,
+};
+const car = {
+    type: "Toyota",
+    model: "Corolla",
+    year: 2009,
+};
+const cars = {
+    type: "Toyota",
+};
+cars.type = "Ford"; // no error
+//   cars.type = 2; // Error: Type 'number' is not assignable to type 'string'.
+const nameAgeMap = {};
+nameAgeMap.Jack = 25; // no error
+// nameAgeMap.Mark = "Fifty"; // Error: Type 'string' is not assignable to type 'number'.
+const car_toyota = {
+    // no error
+    type: "Toyota",
+};
+car_toyota.mileage = 2000;

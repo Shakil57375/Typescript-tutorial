@@ -29,16 +29,44 @@ function multiply(a: number, b: number) {
 
 console.log(multiply(3, 4));
 
-
 // Array
 
-const stringArray = ["Me", "myself"]
+const stringArray = ["Me", "myself"];
 // stringArray.push(22) ❌ you can't push any number to a string Array in typescript.
 
-const numberArray = [32, 44]
+const numberArray = [32, 44];
 // numberArray.push("Shakil")  ❌ you can't push any number to a string Array in typescript.
 
-const mixedArray = ["me", 33, true]
+const mixedArray = ["me", 33, true];
 // mixedArray.push({
 //     name : "Shakil"
 // }) ❌ you can't push any number to a object because there is no object in the previously if you want to push an array you can just create an array when you create the function.
+
+// object
+let MyObj = {
+  name: "Shakil",
+  age: 21,
+  student: true,
+};
+
+const car: { type: string; model: string; year: number } = {
+  type: "Toyota",
+  model: "Corolla",
+  year: 2009,
+};
+
+const cars = {
+  type: "Toyota",
+};
+cars.type = "Ford"; // no error
+//   cars.type = 2; // Error: Type 'number' is not assignable to type 'string'.
+
+const nameAgeMap: { [index: string]: number } = {};
+nameAgeMap.Jack = 25; // no error
+// nameAgeMap.Mark = "Fifty"; // Error: Type 'string' is not assignable to type 'number'.
+
+const car_toyota: { type: string; mileage?: number } = {
+  // no error
+  type: "Toyota",
+};
+car_toyota.mileage = 2000;
