@@ -129,3 +129,52 @@ anyObject ={
   name : "Bangladesh",
   age : 52
 }
+
+// function
+
+/* let MyFunc:Function
+
+MyFunc = (a: string, b:string) =>{
+  console.log(`Hello ${a} and ${b}`)
+} */
+
+
+let MyFunc = (a: string, b:string) =>{
+  console.log(`Hello ${a} and ${b}`)
+}
+
+MyFunc("S","F");
+// !optional parameter
+
+/* let MyFunc2 = (a: string, b:string, c?:number) =>{
+  console.log(`Hello ${a} and ${b}`)
+}
+
+MyFunc2("S","F"); */
+
+// ? default value of parameter.
+
+let MyFunc2 = (a: string, b:string, c:number= 33) =>{
+  console.log(`Hello ${a} and ${b} and ${c}`)
+}
+
+MyFunc2("S","F", 5);
+// ! return type void 
+// let voidReturn = () =>{
+//   return 
+// }
+
+// ? return type string
+let stringReturn = (a: string, b: string) =>{
+  return (a + b)
+}
+
+/* // * return type number
+let NumberReturn = (a: number, b: number) =>{
+  return (a + b)
+} */
+
+let setExplicitReturn = (a: string, b: string) : string =>{
+  return (a + b)
+}
+
