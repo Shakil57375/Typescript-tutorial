@@ -106,19 +106,19 @@ goodObj = {
     //  hobby : ["foot"] will occur an error cz you didn't assign any hobby or array data type in the previous object.
 }
 
-// ? Dynamic Type / Any Type
+// ! Dynamic Type / Any Type
 
 // we can set and value to set any datatype to a variable 
 let any: any;
 
 any = 5;
 any = "shakil"
-// any type array
+// ! any type array
 let anyArray: any[] = [];
 anyArray.push("na")
 anyArray.push(44)
 
-// any type object
+// ! any type object
 
 let anyObject : {
   name : any,
@@ -130,7 +130,7 @@ anyObject ={
   age : 52
 }
 
-// function
+// ! function
 
 /* let MyFunc:Function
 
@@ -178,3 +178,18 @@ let setExplicitReturn = (a: string, b: string) : string =>{
   return (a + b)
 }
 
+// ! Type Aliases
+
+type stringOrNumber = string | number
+type userType = {name : string, age : number}
+const userDetails = (id: stringOrNumber, user : userType) =>{
+  console.log(`User id is ${id} name is ${user.name} and age is ${user.age}`)
+}
+
+
+const sayHello = (user : userType) =>{
+  console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`)
+}
+
+// Call the function with name and age values
+sayHello({ name: "John", age: 30 }); // Example values for name and age
