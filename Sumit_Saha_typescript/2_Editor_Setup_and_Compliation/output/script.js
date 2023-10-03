@@ -173,3 +173,21 @@ userDetail = (id, // have to provide number and string can't provide one.
 user) => {
     return;
 };
+// ! classes
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing`);
+    }
+}
+const mash = new Player("Mash", 38, "Bangladesh");
+console.log(mash);
+const sak = new Player("Sakib", 36, "Bangladesh");
+const players = [];
+players.push(mash);
+players.push(sak);
+console.log(players);
