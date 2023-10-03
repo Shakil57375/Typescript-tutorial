@@ -80,6 +80,7 @@ obj = {
     hobby : ["cricket", "football"]
 } */
 // you can assign only defined datatypes in you object
+// object signature
 let goodObj;
 goodObj = {
     name: "Shakil",
@@ -88,7 +89,7 @@ goodObj = {
     //  hobby : ["foot"] will occur an error cz you didn't assign any hobby or array data type in the previous object.
 };
 // ! Dynamic Type / Any Type
-// we can set and value to set any datatype to a variable 
+// we can set and value to set any datatype to a variable
 let any;
 any = 5;
 any = "shakil";
@@ -100,7 +101,7 @@ anyArray.push(44);
 let anyObject;
 anyObject = {
     name: "Bangladesh",
-    age: 52
+    age: 52,
 };
 // ! function
 /* let MyFunc:Function
@@ -123,22 +124,22 @@ let MyFunc2 = (a, b, c = 33) => {
     console.log(`Hello ${a} and ${b} and ${c}`);
 };
 MyFunc2("S", "F", 5);
-// ! return type void 
+// ! return type void
 // let voidReturn = () =>{
-//   return 
+//   return
 // }
 // ? return type string
 let stringReturn = (a, b) => {
-    return (a + b);
+    return a + b;
 };
 /* // * return type number
 let NumberReturn = (a: number, b: number) =>{
   return (a + b)
 } */
 let setExplicitReturn = (a, b) => {
-    return (a + b);
+    return a + b;
 };
-const userDetails = (id, user) => {
+let userDetails = (id, user) => {
     console.log(`User id is ${id} name is ${user.name} and age is ${user.age}`);
 };
 const sayHello = (user) => {
@@ -146,3 +147,29 @@ const sayHello = (user) => {
 };
 // Call the function with name and age values
 sayHello({ name: "John", age: 30 }); // Example values for name and age
+// Function Signatures
+// * you can't add any parameter to the function before adding any parameter on the signature.
+let add;
+add = (a, b) => {
+    // console.log(a + b) // ! will return error because we set number as return value in the signature and it will return void.
+    return a + b; // ? will return number
+};
+console.log(add(3, 4));
+// calculate number.
+// if you didn't return anything from the blocks then typescript will provide errors.
+/* let Calculate: (x: number, y: number, c: string) => number;
+Calculate = (a: number, b: number, c: string) => {
+  if (c === "add") {
+    return a + b;
+  } else {
+    return a - b;
+  }
+};
+
+console.log(Calculate(5, 6, "minus ")); */
+// complex function signature.
+let userDetail;
+userDetail = (id, // have to provide number and string can't provide one.
+user) => {
+    return;
+};

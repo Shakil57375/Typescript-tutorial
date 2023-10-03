@@ -76,7 +76,7 @@ car_toyota.mileage = 2000;
 let a: string; // can't assign numbers
 let b: number; // can't assign strings
 // if you want to assign both number and string on a variable you can just write it.
-let c : string | number
+let c: string | number;
 // array
 let array: (string | number)[] = [];
 // you can assign strings and numbers in this array. If you tries to push object, boolean it will provide error on the code.
@@ -92,43 +92,43 @@ obj = {
     hobby : ["cricket", "football"]
 } */
 // you can assign only defined datatypes in you object
-
-let goodObj : {
-    name : string,
-    age : number,
-    adult : boolean,
-}
+// object signature
+let goodObj: {
+  name: string;
+  age: number;
+  adult: boolean;
+};
 
 goodObj = {
-    name : "Shakil",
-    age : 21,
-    adult : true,
-    //  hobby : ["foot"] will occur an error cz you didn't assign any hobby or array data type in the previous object.
-}
+  name: "Shakil",
+  age: 21,
+  adult: true,
+  //  hobby : ["foot"] will occur an error cz you didn't assign any hobby or array data type in the previous object.
+};
 
 // ! Dynamic Type / Any Type
 
-// we can set and value to set any datatype to a variable 
+// we can set and value to set any datatype to a variable
 let any: any;
 
 any = 5;
-any = "shakil"
+any = "shakil";
 // ! any type array
 let anyArray: any[] = [];
-anyArray.push("na")
-anyArray.push(44)
+anyArray.push("na");
+anyArray.push(44);
 
 // ! any type object
 
-let anyObject : {
-  name : any,
-  age : any
-}
+let anyObject: {
+  name: any;
+  age: any;
+};
 
-anyObject ={
-  name : "Bangladesh",
-  age : 52
-}
+anyObject = {
+  name: "Bangladesh",
+  age: 52,
+};
 
 // ! function
 
@@ -138,12 +138,11 @@ MyFunc = (a: string, b:string) =>{
   console.log(`Hello ${a} and ${b}`)
 } */
 
+let MyFunc = (a: string, b: string) => {
+  console.log(`Hello ${a} and ${b}`);
+};
 
-let MyFunc = (a: string, b:string) =>{
-  console.log(`Hello ${a} and ${b}`)
-}
-
-MyFunc("S","F");
+MyFunc("S", "F");
 // !optional parameter
 
 /* let MyFunc2 = (a: string, b:string, c?:number) =>{
@@ -154,42 +153,82 @@ MyFunc2("S","F"); */
 
 // ? default value of parameter.
 
-let MyFunc2 = (a: string, b:string, c:number= 33) =>{
-  console.log(`Hello ${a} and ${b} and ${c}`)
-}
+let MyFunc2 = (a: string, b: string, c: number = 33) => {
+  console.log(`Hello ${a} and ${b} and ${c}`);
+};
 
-MyFunc2("S","F", 5);
-// ! return type void 
+MyFunc2("S", "F", 5);
+// ! return type void
 // let voidReturn = () =>{
-//   return 
+//   return
 // }
 
 // ? return type string
-let stringReturn = (a: string, b: string) =>{
-  return (a + b)
-}
+let stringReturn = (a: string, b: string) => {
+  return a + b;
+};
 
 /* // * return type number
 let NumberReturn = (a: number, b: number) =>{
   return (a + b)
 } */
 
-let setExplicitReturn = (a: string, b: string) : string =>{
-  return (a + b)
-}
+let setExplicitReturn = (a: string, b: string): string => {
+  return a + b;
+};
 
 // ! Type Aliases
 
-type stringOrNumber = string | number
-type userType = {name : string, age : number}
-const userDetails = (id: stringOrNumber, user : userType) =>{
-  console.log(`User id is ${id} name is ${user.name} and age is ${user.age}`)
-}
+type stringOrNumber = string | number;
+type userType = { name: string; age: number };
+let userDetails = (id: stringOrNumber, user: userType) => {
+  console.log(`User id is ${id} name is ${user.name} and age is ${user.age}`);
+};
 
-
-const sayHello = (user : userType) =>{
-  console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`)
-}
+const sayHello = (user: userType) => {
+  console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`);
+};
 
 // Call the function with name and age values
 sayHello({ name: "John", age: 30 }); // Example values for name and age
+
+// Function Signatures
+// * you can't add any parameter to the function before adding any parameter on the signature.
+let add: (x: number, y: number) => number;
+add = (a: number, b: number) => {
+  // console.log(a + b) // ! will return error because we set number as return value in the signature and it will return void.
+  return a + b; // ? will return number
+};
+console.log(add(3, 4));
+
+// calculate number.
+// if you didn't return anything from the blocks then typescript will provide errors.
+/* let Calculate: (x: number, y: number, c: string) => number;
+Calculate = (a: number, b: number, c: string) => {
+  if (c === "add") {
+    return a + b;
+  } else {
+    return a - b;
+  }
+};
+
+console.log(Calculate(5, 6, "minus ")); */
+
+// complex function signature.
+let userDetail: (
+  id: number | string,
+  userInfo: {
+    name: string;
+    age: number;
+  }
+) => void;
+
+userDetail = (
+  id: number | string, // have to provide number and string can't provide one.
+  user: { // * can change
+    name: string; // ! can't change
+    age: number; // ! can't change
+  }
+) => {
+  return;
+};
