@@ -60,3 +60,30 @@ const car_toyota = {
     type: "Toyota",
 };
 car_toyota.mileage = 2000;
+// Explicit and Union Types
+// variables
+let a; // can't assign numbers
+let b; // can't assign strings
+// if you want to assign both number and string on a variable you can just write it.
+let c;
+// array
+let array = [];
+// you can assign strings and numbers in this array. If you tries to push object, boolean it will provide error on the code.
+// array.push("sumit", 33, false)
+// object
+// you can assign any kind of datatypes in this object syntax.
+/* let obj: object;
+obj = {
+    name : "Shakil",
+    age : 21,
+    student : true,
+    hobby : ["cricket", "football"]
+} */
+// you can assign only defined datatypes in you object
+let goodObj;
+goodObj = {
+    name: "Shakil",
+    age: 21,
+    adult: true,
+    // hobby : ["foot"] will occur an error cz you didn't assign any hobby or array data type in the previous object.
+};
