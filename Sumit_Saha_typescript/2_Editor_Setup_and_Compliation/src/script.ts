@@ -371,3 +371,17 @@ enum Weekday {
 }
 
 type WeekdayType = `${Weekday}`;
+
+// Tuples
+/* Unlike arrays, tuples have a fixed length, and the types of each element are known at the time of declaration. In TypeScript, tuples are represented using square brackets, and each element is separated by a comma. We can also specify the type of each element using type annotations. */
+let myArray = [3, "hello", {p:3}]
+// don't have to maintain the order can change any data from the array but have to maintain the datatypes if you make any arrays with the type of object array and number you can change them order doesn't matter.
+myArray[1] = {p:2} // allowed in array
+console.log(myArray[1])
+// have to maintain the order can't change any data from the array if you want to change any data you have to maintain the datatypes and the order as well like if you want to change the number 1 data the data is provided as string you can't replace it with number or object or any kind of data type.
+// ! You have to maintain the datatype and the order also to replace data on tuples.
+let myTuples:[number, string, object] = [4, "world", {t : 1}]
+// myTuples[0] = "string" // not allowed in tuples
+myTuples[0] = 7 // you have to change the value to maintain the data types.
+console.log(myTuples)
+// Array methods are applicable in tuples but we will can't use it because it will break the rules of tuples.
