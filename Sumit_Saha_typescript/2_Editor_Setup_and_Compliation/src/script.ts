@@ -277,21 +277,21 @@ console.log(players);
 // ! typescript object interface
 // * Interface provide us any kind of structure of class and objects.
 interface RectangleOptions {
-  width : number;
-  length : number
+  width: number;
+  length: number;
 }
 
-function drawRectangle(options: RectangleOptions){
-  let width  = options.width
-  let length = options.length
+function drawRectangle(options: RectangleOptions) {
+  let width = options.width;
+  let length = options.length;
 }
 
 let threeDbOptions = {
-  width : 30,
-  length : 20,
-  height : 34,
-}
-drawRectangle(threeDbOptions)
+  width: 30,
+  length: 20,
+  height: 34,
+};
+drawRectangle(threeDbOptions);
 
 // GENERICS
 
@@ -305,22 +305,44 @@ in creating reusable components that can apply to different use cases,
 for example:
 */
 
-function returnInput <Type>(arg: Type): Type {
+function returnInput<Type>(arg: Type): Type {
   return arg;
-};
-const returnInputStr = returnInput<string>('Foo Bar');
+}
+const returnInputStr = returnInput<string>("Foo Bar");
 const returnInputNum = returnInput<number>(5);
 
 console.log(returnInputStr); // Foo Bar
 console.log(returnInputNum); // 5
-
-const addId = <T> (obj : T) =>{
+// <T> Receives the types of objects. <T> type converts any datatype to strings. // ! to avoid this default behavior we can explicitly declare it to object array or any kind of datatype as an example
+const addId = <
+  T extends {
+    name: string;
+    age: number;
+  }
+>(
+  obj: T
+) => {
   let id = Math.floor(Math.random() * 100);
-  return { ...obj , id}
-}
-
+  return { ...obj, id };
+};
+// * will work
 let user = addId({
-  name : "Mash",
-  age : 40,
-  country : "bangladesh"
-})
+  name: "Mash",
+  age: 40,
+  country: "bangladesh",
+});
+
+// ! will not work
+/* const users = ["nani", "dadi"]
+addId(users) */
+
+// Generics Interface
+interface GenericIdentityFn {
+  <Type>(arg: Type): Type;
+}
+ 
+function identity<Type>(arg: Type): Type {
+  return arg;
+}
+ 
+let myIdentity: GenericIdentityFn = identity;

@@ -236,17 +236,22 @@ for example:
 function returnInput(arg) {
     return arg;
 }
-;
-const returnInputStr = returnInput('Foo Bar');
+const returnInputStr = returnInput("Foo Bar");
 const returnInputNum = returnInput(5);
 console.log(returnInputStr); // Foo Bar
 console.log(returnInputNum); // 5
+// <T> Receives the types of objects. <T> type converts any datatype to strings. // ! to avoid this default behavior we can explicitly declare it to object array or any kind of datatype as an example
 const addId = (obj) => {
     let id = Math.floor(Math.random() * 100);
     return Object.assign(Object.assign({}, obj), { id });
 };
+// * will work
 let user = addId({
     name: "Mash",
     age: 40,
-    country: "bangladesh"
+    country: "bangladesh",
 });
+function identity(arg) {
+    return arg;
+}
+let myIdentity = identity;
