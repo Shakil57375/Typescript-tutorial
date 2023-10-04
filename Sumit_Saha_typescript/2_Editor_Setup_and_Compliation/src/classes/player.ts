@@ -6,6 +6,7 @@
 // * private : If you give private modifier to any of our class variable no one can change or access it.
 // * readonly : If you give readonly modifier to any of our class variable no one can change or but they can access it.
 // ? We can't use private variable when we use interface in type script directly.
+// ! typescript class interface
 import {IsPlayer} from "../Interface/IsPlayer.js"
 export class Player implements IsPlayer {
   // brief

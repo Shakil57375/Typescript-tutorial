@@ -293,5 +293,4 @@ let threeDbOptions = {
 }
 drawRectangle(threeDbOptions)
 
-// ! typescript class interface
 
