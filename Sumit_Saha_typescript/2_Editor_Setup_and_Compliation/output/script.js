@@ -223,3 +223,30 @@ let threeDbOptions = {
     height: 34,
 };
 drawRectangle(threeDbOptions);
+// GENERICS
+/*
+What are Generics?
+Generics have been a major feature of strongly typed languages
+like Java and C#. In TypeScript, they allow the types of components
+and functions to be "SPECIFIED LATER" which allows them to be used
+in creating reusable components that can apply to different use cases,
+
+for example:
+*/
+function returnInput(arg) {
+    return arg;
+}
+;
+const returnInputStr = returnInput('Foo Bar');
+const returnInputNum = returnInput(5);
+console.log(returnInputStr); // Foo Bar
+console.log(returnInputNum); // 5
+const addId = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+let user = addId({
+    name: "Mash",
+    age: 40,
+    country: "bangladesh"
+});
