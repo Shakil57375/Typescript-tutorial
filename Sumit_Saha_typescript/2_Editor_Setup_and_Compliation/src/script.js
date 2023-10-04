@@ -1,4 +1,4 @@
-const country = "Bangladesh";
+var country = "Bangladesh";
 console.log(country);
 // common errors when we work with the variables.
 /* let playerName = "Mash"
@@ -8,7 +8,7 @@ console.log(playerName) */
 // another way to declare will not provide any error
 // When declaring and defining a variable together, TypeScript can identify errors. If a variable is declared first and then assigned a string value, it can be reassigned a different datatype without any errors in TypeScript.
 // That's what happened here
-let playerName;
+var playerName;
 console.log(playerName); // undefined
 playerName = "Tamim";
 playerName = 33;
@@ -27,46 +27,46 @@ function multiply(a, b) {
 }
 console.log(multiply(3, 4));
 // Array
-const stringArray = ["Me", "myself"];
+var stringArray = ["Me", "myself"];
 // stringArray.push(22) ❌ you can't push any number to a string Array in typescript.
-const numberArray = [32, 44];
+var numberArray = [32, 44];
 // numberArray.push("Shakil")  ❌ you can't push any number to a string Array in typescript.
-const mixedArray = ["me", 33, true];
+var mixedArray = ["me", 33, true];
 // mixedArray.push({
 //     name : "Shakil"
 // }) ❌ you can't push any number to a object because there is no object in the previously if you want to push an array you can just create an array when you create the function.
 // object
-let MyObj = {
+var MyObj = {
     name: "Shakil",
     age: 21,
     student: true,
 };
-const car = {
+var car = {
     type: "Toyota",
     model: "Corolla",
     year: 2009,
 };
-const cars = {
+var cars = {
     type: "Toyota",
 };
 cars.type = "Ford"; // no error
 //   cars.type = 2; // Error: Type 'number' is not assignable to type 'string'.
-const nameAgeMap = {};
+var nameAgeMap = {};
 nameAgeMap.Jack = 25; // no error
 // nameAgeMap.Mark = "Fifty"; // Error: Type 'string' is not assignable to type 'number'.
-const car_toyota = {
+var car_toyota = {
     // no error
     type: "Toyota",
 };
 car_toyota.mileage = 2000;
 // Explicit and Union Types
 // variables
-let a; // can't assign numbers
-let b; // can't assign strings
+var a; // can't assign numbers
+var b; // can't assign strings
 // if you want to assign both number and string on a variable you can just write it.
-let c;
+var c;
 // array
-let array = [];
+var array = [];
 // you can assign strings and numbers in this array. If you tries to push object, boolean it will provide error on the code.
 // array.push("sumit", 33, false)
 // object
@@ -80,7 +80,7 @@ obj = {
 } */
 // you can assign only defined datatypes in you object
 // object signature
-let goodObj;
+var goodObj;
 goodObj = {
     name: "Shakil",
     age: 21,
@@ -89,15 +89,15 @@ goodObj = {
 };
 // ! Dynamic Type / Any Type
 // we can set and value to set any datatype to a variable
-let any;
+var any;
 any = 5;
 any = "shakil";
 // ! any type array
-let anyArray = [];
+var anyArray = [];
 anyArray.push("na");
 anyArray.push(44);
 // ! any type object
-let anyObject;
+var anyObject;
 anyObject = {
     name: "Bangladesh",
     age: 52,
@@ -108,8 +108,8 @@ anyObject = {
 MyFunc = (a: string, b:string) =>{
   console.log(`Hello ${a} and ${b}`)
 } */
-let MyFunc = (a, b) => {
-    console.log(`Hello ${a} and ${b}`);
+var MyFunc = function (a, b) {
+    console.log("Hello ".concat(a, " and ").concat(b));
 };
 MyFunc("S", "F");
 // !optional parameter
@@ -119,8 +119,9 @@ MyFunc("S", "F");
 
 MyFunc2("S","F"); */
 // ? default value of parameter.
-let MyFunc2 = (a, b, c = 33) => {
-    console.log(`Hello ${a} and ${b} and ${c}`);
+var MyFunc2 = function (a, b, c) {
+    if (c === void 0) { c = 33; }
+    console.log("Hello ".concat(a, " and ").concat(b, " and ").concat(c));
 };
 MyFunc2("S", "F", 5);
 // ! return type void
@@ -128,28 +129,28 @@ MyFunc2("S", "F", 5);
 //   return
 // }
 // ? return type string
-let stringReturn = (a, b) => {
+var stringReturn = function (a, b) {
     return a + b;
 };
 /* // * return type number
 let NumberReturn = (a: number, b: number) =>{
   return (a + b)
 } */
-let setExplicitReturn = (a, b) => {
+var setExplicitReturn = function (a, b) {
     return a + b;
 };
-let userDetails = (id, user) => {
-    console.log(`User id is ${id} name is ${user.name} and age is ${user.age}`);
+var userDetails = function (id, user) {
+    console.log("User id is ".concat(id, " name is ").concat(user.name, " and age is ").concat(user.age));
 };
-const sayHello = (user) => {
-    console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`);
+var sayHello = function (user) {
+    console.log("Hello ".concat(user.age > 50 ? "Sir" : "Mr.", " ").concat(user.name));
 };
 // Call the function with name and age values
 sayHello({ name: "John", age: 30 }); // Example values for name and age
 // Function Signatures
 // * you can't add any parameter to the function before adding any parameter on the signature.
-let add;
-add = (a, b) => {
+var add;
+add = function (a, b) {
     // console.log(a + b) // ! will return error because we set number as return value in the signature and it will return void.
     return a + b; // ? will return number
 };
@@ -167,49 +168,49 @@ Calculate = (a: number, b: number, c: string) => {
 
 console.log(Calculate(5, 6, "minus ")); */
 // complex function signature.
-let userDetail;
-userDetail = (id, // have to provide number and string can't provide one.
-user) => {
+var userDetail;
+userDetail = function (id, // have to provide number and string can't provide one.
+user) {
     return;
 };
 // ! classes
-// // We can modify the access by using access modifier
-// // * there is 3 different kids of modifiers in typescript
-// // ? they are : 1. public 2. private & 3. readonly
-// // * public: If you give public modifier to any of our class variable any one can change or access it.
-// // * private : If you give private modifier to any of our class variable no one can change or access it.
-// // * readonly : If you give readonly modifier to any of our class variable no one can change or but they can access it.
-// class Player {
-//   // brief
-//   /* public name : string;
-//   private age : number;
-//   readonly country : string;
-//   constructor(n: string, a : number, c:string){
-//     this.name = n;
-//     this.age = a;
-//     this.country = c
-//   } */
-// // * shortcut
-//   constructor(
-//     public name: string,
-//     private age: number,
-//     readonly country: string
-//   ) {}
-//   play() {
-//     console.log(`${this.name} from ${this.country} is playing`);
-//   }
-// }
-// imported player name from player.ts
-import { Player } from "./classes/player.js";
-const mash = new Player("Mash", 38, "Bangladesh");
+// We can modify the access by using access modifier
+// * there is 3 different kids of modifiers in typescript
+// ? they are : 1. public 2. private & 3. readonly
+// * public: If you give public modifier to any of our class variable any one can change or access it.
+// * private : If you give private modifier to any of our class variable no one can change or access it.
+// * readonly : If you give readonly modifier to any of our class variable no one can change or but they can access it.
+var Player = /** @class */ (function () {
+    // brief
+    /* public name : string;
+    private age : number;
+    readonly country : string;
+    constructor(n: string, a : number, c:string){
+      this.name = n;
+      this.age = a;
+      this.country = c
+    } */
+    // * shortcut
+    function Player(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+    Player.prototype.play = function () {
+        console.log("".concat(this.name, " from ").concat(this.country, " is playing"));
+    };
+    return Player;
+}());
+var mash = new Player("Mash", 38, "Bangladesh");
 console.log(mash);
-const sak = new Player("Sakib", 36, "Bangladesh");
+var sak = new Player("Sakib", 36, "Bangladesh");
 sak.name = "Sakib"; // we can change it.
 // sak.age = 33 //! Error : Property 'age' is private and only accessible within class 'Player'.
 //mash.country = "India" //! Error : Cannot assign to 'country' because it is a read-only property.
-const players = [];
+var players = [];
 // console.log(sak.age) //! Error: Property 'age' is private and only accessible within class 'Player'.
 console.log(mash.country); // we can access it
 players.push(mash);
 players.push(sak);
 console.log(players);
+// 
