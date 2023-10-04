@@ -223,3 +223,4 @@ let threeDbOptions = {
     height: 34,
 };
 drawRectangle(threeDbOptions);
+// ! typescript class interface

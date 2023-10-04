@@ -275,7 +275,7 @@ players.push(mash);
 players.push(sak);
 console.log(players);
 // ! typescript object interface
-
+// * Interface provide us any kind of structure of class and objects.
 interface RectangleOptions {
   width : number;
   length : number
@@ -292,3 +292,6 @@ let threeDbOptions = {
   height : 34,
 }
 drawRectangle(threeDbOptions)
+
+// ! typescript class interface
+

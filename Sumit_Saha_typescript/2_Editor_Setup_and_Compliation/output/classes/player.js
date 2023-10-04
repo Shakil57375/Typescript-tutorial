@@ -1,10 +1,3 @@
-// ! classes
-// We can modify the access by using access modifier
-// * there is 3 different kids of modifiers in typescript
-// ? they are : 1. public 2. private & 3. readonly
-// * public: If you give public modifier to any of our class variable any one can change or access it.
-// * private : If you give private modifier to any of our class variable no one can change or access it.
-// * readonly : If you give readonly modifier to any of our class variable no one can change or but they can access it.
 export class Player {
     // brief
     /* public name : string;
@@ -20,6 +13,9 @@ export class Player {
         this.name = name;
         this.age = age;
         this.country = country;
+    }
+    getProperty() {
+        return this.age;
     }
     play() {
         console.log(`${this.name} from ${this.country} is playing`);
