@@ -173,7 +173,7 @@ user) => {
     return;
 };
 // ! classes
-// // We can modify the access by using access modifier
+// ? We can modify the access by using access modifier
 // // * there is 3 different kids of modifiers in typescript
 // // ? they are : 1. public 2. private & 3. readonly
 // // * public: If you give public modifier to any of our class variable any one can change or access it.
@@ -213,3 +213,13 @@ console.log(mash.country); // we can access it
 players.push(mash);
 players.push(sak);
 console.log(players);
+function drawRectangle(options) {
+    let width = options.width;
+    let length = options.length;
+}
+let threeDbOptions = {
+    width: 30,
+    length: 20,
+    height: 34,
+};
+drawRectangle(threeDbOptions);
