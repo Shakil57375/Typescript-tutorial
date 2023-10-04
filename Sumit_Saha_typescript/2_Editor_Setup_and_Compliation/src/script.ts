@@ -233,10 +233,16 @@ userDetail = (
   return;
 };
 // ! classes
+// We can modify the access by using access modifier 
+// * there is 3 different kids of modifiers in typescript
+// ? they are : 1. public 2. private & 3. readonly
+// * public: If you give public modifier to any of our class variable any one can change or access it.
+// * private : If you give private modifier to any of our class variable no one can change or access it.
+// * readonly : If you give readonly modifier to any of our class variable no one can change or but they can access it.
 class Player{
-  name : string;
-  age : number;
-  country : string;
+  public name : string;
+  private age : number;
+  readonly country : string;
   constructor(n: string, a : number, c:string){
     this.name = n;
     this.age = a;
@@ -250,8 +256,12 @@ class Player{
 const mash = new Player("Mash", 38, "Bangladesh")
 console.log(mash)
 const sak = new Player("Sakib", 36, "Bangladesh")
-
+sak.name = "Sakib" // we can change it.
+// sak.age = 33 //! Error : Property 'age' is private and only accessible within class 'Player'.
+//mash.country = "India" //! Error : Cannot assign to 'country' because it is a read-only property.
 const players: Player[] = [];
+// console.log(sak.age) //! Error: Property 'age' is private and only accessible within class 'Player'.
+console.log(mash.country) // we can access it
 players.push(mash)
 players.push(sak)
 console.log(players)
