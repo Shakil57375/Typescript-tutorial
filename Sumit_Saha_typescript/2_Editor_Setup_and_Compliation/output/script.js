@@ -255,3 +255,25 @@ function identity(arg) {
     return arg;
 }
 let myIdentity = identity;
+// ENUM Types
+// String enum
+/* enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
+}
+
+// Numeric enums
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+} */
+var Weekday;
+(function (Weekday) {
+    Weekday["MONDAY"] = "mon";
+    Weekday["TUESDAY"] = "tue";
+    Weekday["WEDNESDAY"] = "wed";
+})(Weekday || (Weekday = {}));

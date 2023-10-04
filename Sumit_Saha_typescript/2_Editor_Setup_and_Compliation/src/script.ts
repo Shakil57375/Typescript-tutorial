@@ -340,9 +340,34 @@ addId(users) */
 interface GenericIdentityFn {
   <Type>(arg: Type): Type;
 }
- 
+
 function identity<Type>(arg: Type): Type {
   return arg;
 }
- 
+
 let myIdentity: GenericIdentityFn = identity;
+
+// ENUM Types
+// String enum
+/* enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
+}
+
+// Numeric enums
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+} */
+
+enum Weekday {
+  MONDAY = "mon",
+  TUESDAY = "tue",
+  WEDNESDAY = "wed",
+}
+
+type WeekdayType = `${Weekday}`;
