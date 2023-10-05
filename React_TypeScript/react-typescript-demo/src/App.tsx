@@ -27,11 +27,14 @@ const App = () => {
   ];
   return (
     <div className="App">
-      <Greet name="bangladesh" messageCount={10} isLoggedIn={false} />
+      {/* <Greet name="bangladesh" messageCount={10} isLoggedIn={false} /> */}
+      {/* optional props use ? on the children to pass optional props */}
+      <Greet name="bangladesh"  isLoggedIn={false} />
       <Person name={PersonName} />
       <PersonList names = {nameList} />
       <Status status="loading"/>
       <Heading>PlaceHolder Text</Heading>
+      {/*//! Passing react components as props" */}
       <Oscar>
         <Heading>Oscar goes to Hamim!</Heading>
       </Oscar>
