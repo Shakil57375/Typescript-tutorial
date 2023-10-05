@@ -2,6 +2,7 @@ import "./App.css";
 import { Button } from "./Components/Button";
 import Greet from "./Components/Greet";
 import Heading from "./Components/Heading";
+import { Input } from "./Components/Input";
 import Oscar from "./Components/Oscar";
 import Person from "./Components/Person";
 import PersonList from "./Components/PersonList";
@@ -43,9 +44,10 @@ const App = () => {
       </Oscar>
       <Button
       handleClick={(event, id)=>{
-        console.log("Button clicked", event, id)
+        console.log("Button clicked", event, id);
       }}
       ></Button>
+      <Input value=""  handleChange={(event) => console.log(event)}></Input>
     </div>
   );
 };
