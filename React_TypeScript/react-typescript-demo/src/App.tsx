@@ -1,5 +1,6 @@
 import "./App.css";
 import Greet from "./Components/Greet";
+import Heading from "./Components/Heading";
 import Person from "./Components/Person";
 import PersonList from "./Components/PersonList";
 import Status from "./Components/Status";
@@ -29,6 +30,7 @@ const App = () => {
       <Person name={PersonName} />
       <PersonList names = {nameList} />
       <Status status="loading"/>
+      <Heading>PlaceHolder Text</Heading>
     </div>
   );
 };
