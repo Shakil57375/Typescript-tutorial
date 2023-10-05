@@ -356,7 +356,7 @@ let myIdentity: GenericIdentityFn = identity;
   Right = "RIGHT",
 }
 
-// Numeric enums
+Numeric enums
 enum Direction {
   Up = 1,
   Down,
