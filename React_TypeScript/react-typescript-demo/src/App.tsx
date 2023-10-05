@@ -1,4 +1,5 @@
 import "./App.css";
+import { Button } from "./Components/Button";
 import Greet from "./Components/Greet";
 import Heading from "./Components/Heading";
 import Oscar from "./Components/Oscar";
@@ -32,12 +33,19 @@ const App = () => {
       <Greet name="bangladesh"  isLoggedIn={false} />
       <Person name={PersonName} />
       <PersonList names = {nameList} />
+      {/* //? union of string literals */}
       <Status status="loading"/>
+      {/* //* children Props */}
       <Heading>PlaceHolder Text</Heading>
       {/*//! Passing react components as props" */}
       <Oscar>
         <Heading>Oscar goes to Hamim!</Heading>
       </Oscar>
+      <Button
+      handleClick={(event, id)=>{
+        console.log("Button clicked", event, id)
+      }}
+      ></Button>
     </div>
   );
 };
