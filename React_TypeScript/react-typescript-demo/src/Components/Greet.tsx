@@ -1,10 +1,16 @@
 type GreetProps = {
-    name : string
-}
-export const Greet = (props : GreetProps) => {
+  name: string;
+  messageCount: number;
+  isLoggedIn: boolean;
+};
+export const Greet = (props: GreetProps) => {
   return (
-    <div>Hello {props.name}</div>
-  )
-}
+    <div>
+      {props.isLoggedIn
+        ? `Welcome ${props.name} You have ${props.messageCount}  todo`
+        : "Welcome Guest Please login"}
+    </div>
+  );
+};
 
-export default Greet
+export default Greet;
