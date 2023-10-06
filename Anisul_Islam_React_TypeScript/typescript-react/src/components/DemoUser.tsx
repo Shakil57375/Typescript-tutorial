@@ -11,9 +11,12 @@ export const DemoUser = ({ student }: studentProps) => {
     <div>
       <div>
         {student.map((singleStudent, index) => {
-            const {name, age} = singleStudent
+          const { name, age } = singleStudent;
           return (
-            <div style={{display : "flex", alignContent : "center"} } key={index}>
+            <div
+              style={{ display: "flex", alignContent: "center" }}
+              key={index}
+            >
               <p>{name}</p>
               <p>{age}</p>
             </div>

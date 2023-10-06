@@ -1,4 +1,5 @@
 import "./App.css"
+import { DataFetch } from "./components/DataFetch";
 import { DemoUser } from "./components/DemoUser";
 import { User } from "./components/User";
 
@@ -32,6 +33,7 @@ function App() {
       <h1>User Management</h1>
       <User name = "Shakil Hossain" age = {21} isRegistered  = {true} language = {["Bangla", "English"]} user = {person}/>
       <DemoUser student = {students}/>
+      <DataFetch status = {"successful"}/>
     </div>
   );
 }
