@@ -10,7 +10,6 @@ import PersonList from "./Components/PersonList";
 import Status from "./Components/Status";
 import LoggedIn from "./Components/useState/LoggedIn";
 import User from "./Components/useState/User";
-
 const App = () => {
   const PersonName = {
     first: "Bruce",
