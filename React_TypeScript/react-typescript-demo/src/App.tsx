@@ -8,6 +8,7 @@ import Oscar from "./Components/Oscar";
 import Person from "./Components/Person";
 import PersonList from "./Components/PersonList";
 import Status from "./Components/Status";
+import LoggedIn from "./Components/useState/LoggedIn";
 
 const App = () => {
   const PersonName = {
@@ -52,6 +53,8 @@ const App = () => {
       {/* Style Props */}
       {/* can't add any false styles it will provide you error like if you type display : 0 it will provide you error that's develop our developers experiences */}
       <Container styles={{ border: "1px solid black", padding: "1rem", margin : "20px 0px" }}></Container>
+      {/* Using useState Hook */}
+      <LoggedIn></LoggedIn>
     </div>
   );
 };
