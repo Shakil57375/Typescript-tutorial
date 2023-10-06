@@ -1,6 +1,5 @@
-type OscarProps = {
-    children : React.ReactNode
-}
+// ? importing oscar type from different file you can export and import type like components.
+import { OscarProps } from "./OscarTypes"
 const Oscar = (props : OscarProps) => {
   return (
     // ! Passing react components as props"
