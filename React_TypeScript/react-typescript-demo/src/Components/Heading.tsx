@@ -1,6 +1,4 @@
-type headingProps = {
-    children : string
-}
+import { headingProps } from "./HeadingTypes"
 const Heading = (props : headingProps) => {
   return (
     <div>{props.children}</div>
