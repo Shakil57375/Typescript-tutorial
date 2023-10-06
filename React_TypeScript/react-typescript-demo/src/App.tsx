@@ -9,6 +9,7 @@ import Person from "./Components/Person";
 import PersonList from "./Components/PersonList";
 import Status from "./Components/Status";
 import LoggedIn from "./Components/useState/LoggedIn";
+import User from "./Components/useState/User";
 
 const App = () => {
   const PersonName = {
@@ -55,6 +56,8 @@ const App = () => {
       <Container styles={{ border: "1px solid black", padding: "1rem", margin : "20px 0px" }}></Container>
       {/* Using useState Hook */}
       <LoggedIn></LoggedIn>
+      {/* use State hook feature */}
+      <User></User>
     </div>
   );
 };
