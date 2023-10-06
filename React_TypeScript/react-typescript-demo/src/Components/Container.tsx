@@ -3,10 +3,13 @@ import React from "react";
 type propsContainer = {
     styles : React.CSSProperties
 }
-
-export const Container = (props : propsContainer) => {
+// destructuring props values
+// !old one
+// export const Container = (props : propsContainer) => {
+// * new and recommended one
+export const Container = ({styles} : propsContainer) => {
   return (
-    <div style={props.styles}>
+    <div style={styles}>
       Text content goes here
     </div>
   );

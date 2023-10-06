@@ -51,7 +51,7 @@ const App = () => {
       <Input value=""  handleChange={(event) => console.log(event)}></Input>
       {/* Style Props */}
       {/* can't add any false styles it will provide you error like if you type display : 0 it will provide you error that's develop our developers experiences */}
-      <Container styles={{ border: "1px solid black", padding: "1rem" }}></Container>
+      <Container styles={{ border: "1px solid black", padding: "1rem", margin : "20px 0px" }}></Container>
     </div>
   );
 };
