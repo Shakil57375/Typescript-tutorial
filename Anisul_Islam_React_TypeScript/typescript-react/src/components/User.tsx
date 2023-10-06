@@ -3,7 +3,7 @@ type UserProps = {
   age: number;
   isRegistered: boolean;
   language: string[];
-  person: {
+  user: {
     firstName: string;
     lastName: string;
     age: number;
@@ -16,22 +16,39 @@ type UserProps = {
 // basic version
 // export const User = (props : UserProps) => {
 // Recommended version
-export const User = ({ name, age, isRegistered, language, person }: UserProps) => {
+export const User = ({
+  name,
+  age,
+  isRegistered,
+  language,
+  user,
+}: UserProps) => {
   return (
-    <div>
-      {/* basic version */}
-      {/* <p>{props.name}</p>
+    <div style={{display : "flex", justifyContent : "space-around"}}>
+      <div>
+        {/* basic version */}
+        {/* <p>{props.name}</p>
         <p>{props.age}</p> */}
-      {/* Recommended version */}
-      <p>{name}</p>
-      <p>{age}</p>
-      {isRegistered ? <p>Registered user</p> : <p>Not Register user</p>}
-      <p>Speaks:</p>
-      {language.map((lang, index) => {
-        return <span key={index}>{lang}</span>;
-      })}
-      {/* another person data by using object */}
-      
+        {/* Recommended version */}
+        <p>{name}</p>
+        <p>{age}</p>
+        {isRegistered ? <p>Registered user</p> : <p>Not Register user</p>}
+        <span>Speaks:</span>
+        {language.map((lang, index) => {
+          return <span key={index}>{lang}</span>;
+        })}
+      </div>
+      <div>
+        {/* another user data by using object */}
+        <p>{user.firstName}</p>
+        <p>{user.lastName}</p>
+        <p>{user.age}</p>
+        <p>
+          {user.language.map((lang, index) => {
+            return <span key={index}>{lang}</span>;
+          })}
+        </p>
+      </div>
     </div>
   );
 };
