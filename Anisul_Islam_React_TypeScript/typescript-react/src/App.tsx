@@ -7,6 +7,7 @@ import { DemoUser } from "./components/DemoUser";
 import NewUser from "./components/NewUser";
 import Post from "./components/Post";
 import { User } from "./components/User";
+import Counter from "./components/useReducer/Counter";
 import UseState from "./components/useState/UseState";
 
 function App() {
@@ -64,6 +65,9 @@ function App() {
       <NewUser />
       <p className="center">Typing From Event</p>
       <CurrentUser/>
+      {/* use reducer */}
+      <p className="center">use Reducer</p>
+      <Counter/>
     </div>
   );
 }
