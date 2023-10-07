@@ -1,6 +1,7 @@
 import "./App.css";
 import Button from "./components/Button";
 import ButtonStyle from "./components/ButtonStyle";
+import CurrentUser from "./components/CurrentUser";
 import { DataFetch } from "./components/DataFetch";
 import { DemoUser } from "./components/DemoUser";
 import NewUser from "./components/NewUser";
@@ -47,7 +48,7 @@ function App() {
       <DemoUser student={students} />
       <DataFetch status={"successful"} />
       {/* //! children prop */}
-      <p>Children Prop</p>
+      <p className="center">Children Prop</p>
       <Button>Click me 3</Button>
       {/* //! children prop */}
       <Post />
@@ -59,8 +60,10 @@ function App() {
       <UseState />
       {/* Typing events */}
       {/* Event type set */}
-      <p>Event typing</p>
+      <p className="center">Event typing</p>
       <NewUser />
+      <p className="center">Typing From Event</p>
+      <CurrentUser/>
     </div>
   );
 }

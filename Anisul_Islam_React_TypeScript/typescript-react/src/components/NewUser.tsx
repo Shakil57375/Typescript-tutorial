@@ -10,12 +10,11 @@ const NewUser = () => {
   };
   return (
     <div className="user">
-      <p>Create new user</p>
-      <p>On Change event</p>
+      <p className="center">On Change event</p>
       <input type="text" onChange={handleUserName} value={userName} />
       <p style={{ textAlign: "center" }}>{userName}</p>
       {/* onClick event */}
-      <button onClick={handleButtonClick}>Show Name</button>
+      <button onClick={handleButtonClick}>Show Name in Console</button>
     </div>
   );
 };
