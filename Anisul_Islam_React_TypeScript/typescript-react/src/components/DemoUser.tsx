@@ -9,7 +9,7 @@ type studentProps = {
 export const DemoUser = ({ student }: studentProps) => {
   return (
     <div>
-      <div>
+      <div style={{display : "flex", flexDirection : "column", alignItems : "center"}}>
         {student.map((singleStudent, index) => {
           const { name, age } = singleStudent;
           return (

@@ -2,6 +2,7 @@ import "./App.css"
 import Button from "./components/Button";
 import { DataFetch } from "./components/DataFetch";
 import { DemoUser } from "./components/DemoUser";
+import Post from "./components/Post";
 import { User } from "./components/User";
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
       <User name = "Shakil Hossain" age = {21} isRegistered  = {true} language = {["Bangla", "English"]} user = {person}/>
       <DemoUser student = {students}/>
       <DataFetch status = {"successful"}/>
-      <Button>Children sending here</Button>
+      {/* //! children prop */}
+      <Button>Click me 3</Button>
+      <Post/>
     </div>
   );
 }
