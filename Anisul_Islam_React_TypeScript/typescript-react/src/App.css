@@ -9,7 +9,7 @@
 
 .user{
   display: flex;
-  margin: 4rem 0;
+  margin: 1rem 0;
   flex-direction: column;
   justify-content: center;
 }
