@@ -5,6 +5,7 @@ import { DataFetch } from "./components/DataFetch";
 import { DemoUser } from "./components/DemoUser";
 import Post from "./components/Post";
 import { User } from "./components/User";
+import UseState from "./components/useState/UseState";
 
 function App() {
   const person = {
@@ -51,6 +52,8 @@ function App() {
       <ButtonStyle
         style={{ backgroundColor: "red", padding: "0.5rem", color: "white" }}
       />
+      {/* useState Hook */}
+      <UseState/>
     </div>
   );
 }

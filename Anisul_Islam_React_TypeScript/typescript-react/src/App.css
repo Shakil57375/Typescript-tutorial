@@ -6,3 +6,10 @@
   margin: 1rem;
   box-shadow: 0.5rem 0.5rem 0.5rem black;
 }
+
+.user{
+  display: flex;
+  margin: 4rem 0;
+  flex-direction: column;
+  justify-content: center;
+}
