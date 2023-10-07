@@ -1,10 +1,15 @@
-import { TodosProps } from "./TodosType"
+import Todo from "./Todo";
+import { TodosProps } from "./TodosType";
 
-const Todos = ({todos} : TodosProps) => {
-    console.log(todos)
+const Todos = ({ todos }: TodosProps) => {
+  console.log(todos);
   return (
-    <div>Todos</div>
-  )
-}
+    <div>
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo}></Todo>
+      ))}
+    </div>
+  );
+};
 
-export default Todos
+export default Todos;
